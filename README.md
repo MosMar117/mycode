@@ -1,3 +1,4 @@
+Wanting to learn how to version contorl projects with Git and a refresher to Python.
 # mycode
 Tracking my code
 # mycode (Project Title)
