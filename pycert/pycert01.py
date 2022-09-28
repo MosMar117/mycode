@@ -2,7 +2,8 @@
 
 """ Python Project Grade """
 
-# The Idea is to take a user's input of favorite game and comparing it to what list has stored.
+# The Idea is to take a user's input of favorite console and see what games are available.
+
 ninten = ["Super Mario 64","Banjo Kazzoie","Mario Kart", "Paper Mario","Godzilla","Pikmin"]
 
 xbox = ["Halo", "Gears", "Call of Duty","Borderlands"]
@@ -19,22 +20,44 @@ def main():
     while True and (choice != 'Nintendo' and choice != 'Xbox' and choice != 'Playstation'):
         round = round + 1 #For everytime the user enters a nonvalid choice, it will increase
         answer = input('Which is your favoite Console? Your answer: ')
+        answer = answer.capitalize() # this line will make user input first letter start with an uppercase
 
         if answer == "Nintendo":
             print('Nice choice. Here are the games that are available below:  ')
             for x in ninten:
                 print(x)
-            break
+            ans = input('Which Game do you want to play? Your answer: ')
+            ans = ans.capitalize()
+            if ans in ninten:
+                print(ans, '- have fun playing the game!')
+                break
+            else:
+                print('Game not a choice, try again')
+                round = round +1
         elif answer == "Xbox":
             print('Nice choice. Here are the games that are available below:  ')
             for x in xbox:
                 print(x)
-            break
+            ans = input('Which Game do you want to play? Your answer: ')
+            ans = ans.capitalize()
+            if ans in xbox:
+                print(ans, '- have fun playing the game!')
+                break
+            else:
+                print('Game not a choice, try again')
+                round = round +1
         elif answer == "Playstation":
             print('Nice choice. Here are the games that are available below:  ')
             for x in playsta:
                 print(x)
-            break
+            ans = input('Which Game do you want to play? Your answer: ')
+            ans = ans.capitalize()
+            if ans in playsta:
+                print(ans, '- have fun playing the game!')
+                break
+            else:
+                print('Game not a choice, try again')
+                round = round +1
         elif round == 5:
             print('Out of times you can answer. Come again later!') # If the count reachs 5, user will get this answer
             break
