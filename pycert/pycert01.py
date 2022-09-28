@@ -28,7 +28,7 @@ def main():
                 print(x)
             ans = input('Which Game do you want to play? Your answer: ')
             ans = ans.capitalize()
-            if ans in ninten:
+            if ans in ninten: #This will check the list to see if the user input a game from the list
                 print(ans, '- have fun playing the game!')
                 break
             else:
@@ -40,7 +40,7 @@ def main():
                 print(x)
             ans = input('Which Game do you want to play? Your answer: ')
             ans = ans.capitalize()
-            if ans in xbox:
+            if ans in xbox:#This will check the list to see if the user input a game from the list
                 print(ans, '- have fun playing the game!')
                 break
             else:
@@ -52,11 +52,11 @@ def main():
                 print(x)
             ans = input('Which Game do you want to play? Your answer: ')
             ans = ans.capitalize()
-            if ans in playsta:
+            if ans in playsta:#This will check the list to see if the user input a game from the list
                 print(ans, '- have fun playing the game!')
                 break
             else:
-                print('Game not a choice, try again')
+                print('Game not a choice, try again') # User will get a max of 5 chances to input
                 round = round +1
         elif round == 5:
             print('Out of times you can answer. Come again later!') # If the count reachs 5, user will get this answer
